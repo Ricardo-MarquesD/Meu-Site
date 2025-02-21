@@ -1,0 +1,16 @@
+.cadastro {
+    margin: 30px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.cadastro .barra {
+    margin: 50px;
+    border-radius: 2px;
+}
+
+.cadastro h1 {
+    text-align: center;
+    border-bottom: 2px solid white;
+}
+
