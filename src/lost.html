@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/global/global.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleForm.css">
 
     <title>BlackNotes</title>
 </head>
@@ -45,7 +45,32 @@
 
     <main>
 
-        
+        <div class="cadastro">
+
+            <div class="barra">
+                <h1>RECUPERAR SENHA</h1>
+            </div>
+
+            <form action="/lostpassword">
+
+                <div class="elements-form">
+                    <h3>Email:</h3>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="elements-form">
+                    <h3>Nova Senha:</h3>
+                    <input type="password" id="password" required>
+                </div>
+                
+                <div class="elements-form-button">
+                    <button type="submit">Enviar</button>
+                </div>
+
+                <p>Não possui uma conta? <a href="/src/sign.html">Cadastre-se!</a></p>
+
+            </form>
+        </div>
 
     </main>
 
