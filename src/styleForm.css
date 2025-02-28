@@ -63,6 +63,7 @@ main {
     padding: 10px 50px;
     margin-top: 40px;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .cadastro form .elements-form-button button:hover {
