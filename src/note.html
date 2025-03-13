@@ -49,12 +49,12 @@
         <form action="/notes">
 
             <div id="titleN">
-                <input type="text" placeholder="Título">
+                <input type="text" id="title" placeholder="Título">
             </div>
             
 
             <div id="description">
-                <textarea placeholder="Escreva algo aqui..."></textarea>
+                <textarea id="description" placeholder="Escreva algo aqui..."></textarea>
             </div>
 
             <div id="saveButton">
@@ -83,6 +83,32 @@
         </div>
 
     </footer>
+
+    <script>
+        document.querySelector('form[action="notes"]').addEventListener('submit', function(event){
+            event.preventDefault();
+
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+
+            fetch('http://localhost:3000/note', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({title, description})
+            })
+            .then(response => {
+                if(response.ok){
+                    return response.text();
+                } else {
+                    throw new Error('Erro inesperado.');
+                }
+            })
+            .then(data => alert(data))
+            .catch(error => alert(error.menssage));
+        });
+    </script>
 
 </body>
 

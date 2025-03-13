@@ -18,8 +18,8 @@ const db = mysql.createConnection({
 });
 
 db.connect((err) => {
-  if (err) console.log(`Não foi possivel conctar com o banco de dados: ${err}`);
-  console.log('Conectado ao banco de dados da BlackNotes!');
+  if (err) console.log(`Não foi possivel conectar com o banco de dados: ${err}`);
+  else console.log('Conectado ao banco de dados da BlackNotes!');
 });
 
 app.post('/signin', (req, res) => {
@@ -50,7 +50,7 @@ app.post('/signin', (req, res) => {
     });
   });
 
-  app.post('/notes', (req,res) => {
+  app.post('/note', (req,res) => {
     const { title, description } = req.body;
 
     const sql = 'INSERT INTO note ( titleNot, descriptionNot ) VALUES (?, ?)';
