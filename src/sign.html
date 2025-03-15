@@ -99,27 +99,6 @@
 
     </footer>
 
-    <script>
-        document.querySelector('form[action="/signin"]').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const nome = document.getElementById('nome').value;
-            const email = document.getElementById('email').value;
-            const senha = document.getElementById('password').value;
-
-            fetch('http://localhost:3000/cadastrar', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ nome, email, password })
-            })
-                .then(response => response.text())
-                .then(data => alert(data))
-                .catch(error => console.error('Erro:', error));
-        });
-    </script>
-
 </body>
 
 </html>
